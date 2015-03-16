@@ -35,3 +35,9 @@ header
 {
     max-width:none;
 }
+
+textarea    
+{
+    border:none;
+}
+    
