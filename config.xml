@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.reecekelly.universityofgloucestershirecomputing"
+        version   = "1.0.5">
+		
+		<name>University of Gloucestershire Computing</name>
+		<description>An easy to use app for new or existing students studing a computing based course at the Universty of Gloucestershire.</description>
+		<author href="http://reecekelly.comyr.com/">Reece Kelly</author>
+		
+		<feature name="http://api.phonegap.com/1.0/device" />
+		
+		<!--<preference name="permissions" value="none" />-->
+		<preference name="orientation" value="portrait" />
+		<preference name="target-device" value="universal" />
+		<preference name="fullscreen" value="true" />
+		<preference name="SuppressesIncrementalRendering" value="true"/>
+		<preference name="KeepRunning" value="true"/>
+		
+		<preference name="disallowOverscroll" value="true" />
+		<preference name="DisallowOverscroll" value="true" />
+		
+		<gap:plugin name="com.phonegap.plugin.statusbar" version="1.0.1" />
+
+		<gap:plugin name="org.apache.cordova.inappbrowser" />
+		<gap:plugin name="org.apache.cordova.core.vibration" />
+		
+		<preference name="prerendered-icon" value="true" /> 
+		
+		<content src="index.html" />
+		
+		<access origin="*"/>
+</widget>
