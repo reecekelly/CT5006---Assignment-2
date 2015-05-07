@@ -106,6 +106,7 @@ li .icon:before {
 }
 .icon.trash:before {
 	content: "\72";
+	color:#fff;
 }
 .icon.download:before {
 	content: "\73";
@@ -123,7 +124,8 @@ li .icon:before {
 	content: "\77";
 }
 .icon.add:before {
-	content: "\78";
+	content: "\79";
+	color:#fff;
 }
 .icon.remove:before {
 	content: "\79";

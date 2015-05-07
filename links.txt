@@ -1,5 +1,0 @@
-prepros
-http://download.alphapixels.com/
-
-jQuery Mobile Helper - 26/01/2015
-http://www.sitepoint.com/50-jquery-mobile-development/
