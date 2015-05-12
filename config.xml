@@ -31,7 +31,7 @@
 		<!--<gap:splash src="chelt_finder.png" />
 		<preference name="SplashScreenDelay" value="10000"/>-->
 		
-		<icon src="images/chelt_find_64x64.png" />		
+		<icon src="images/chelt_finder_512x512.png" />		
 		
 		<content src="index.html" />
 		
