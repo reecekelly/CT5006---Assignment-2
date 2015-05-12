@@ -28,10 +28,10 @@
 		
 		<preference name="prerendered-icon" value="true" />
 
-		<gap:splash src="splash-screen.png" />
-		<preference name="SplashScreenDelay" value="10000"/>
+		<!--<gap:splash src="chelt_finder.png" />
+		<preference name="SplashScreenDelay" value="10000"/>-->
 		
-		<icon src="images/coat-of-arms_64x64.png" />		
+		<icon src="images/chelt_find_64x64.png" />		
 		
 		<content src="index.html" />
 		
