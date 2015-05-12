@@ -26,7 +26,12 @@
 		<gap:plugin name="org.apache.cordova.inappbrowser" />
 		<gap:plugin name="org.apache.cordova.core.vibration" />
 		
-		<preference name="prerendered-icon" value="true" /> 
+		<preference name="prerendered-icon" value="true" />
+
+		<gap:splash src="splash-screen.png" />
+		<preference name="SplashScreenDelay" value="10000"/>
+		
+		<icon src="images/coat-of-arms_64x64.png" />		
 		
 		<content src="index.html" />
 		
