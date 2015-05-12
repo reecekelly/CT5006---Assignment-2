@@ -56,7 +56,8 @@ function createUser() {
 	var marker = new google.maps.Marker({
 		map: map,
 		animation: google.maps.Animation.DROP,
-		position: {lat: userlat, lng: userlng}
+		position: {lat: userlat, lng: userlng},
+		icon: "images/icon-location_32x32.png"
 	});	
 }
 
@@ -70,7 +71,7 @@ function createMarker(name, description, post, phone, lat, lng, position) {
 		map: map,
 		animation: google.maps.Animation.DROP,
 		position: {lat: lat, lng: lng},
-		icon: "alpha.ico"
+		icon: "images/star-icon_32x32.png"
 	});	
 	
 	var contentinfo = '<h1>'+name+'</h1> </br>'+'<p>'+description+'</p> </br>'+'<p>'+post+'	'+phone+'</p> </br>'+'<p>Marker Location:'+marker.getPosition()+ '</p>'+'<button data-marker='+'"'+position+'"'+' data-method="WALKING" class="directions">Walk</button>'+'<button data-marker='+'"'+position+'"'+' data-method="BICYCLING" class="directions">Bicycling</button>'+'<button data-marker='+'"'+position+'"'+' data-method="DRIVING" class="directions">Driving</button>'+'<button data-marker='+'"'+position+'"'+' data-method="TRANSIT" class="directions">Transit</button>';
@@ -116,6 +117,7 @@ function setAllMap(map) {
 
 function clearMarkers() {
 	setAllMap(null);
+	
 }
 
 function reformMarkers() {

@@ -124,7 +124,7 @@ li .icon:before {
 	content: "\77";
 }
 .icon.add:before {
-	content: "\79";
+	content: "\78";
 	color:#fff;
 }
 .icon.remove:before {
