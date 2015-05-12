@@ -131,6 +131,7 @@ h2 span:last-child {
 #news {
 	width: 100%;
 	height: 50px;
+	margin-top: -10px;
 }
 
 #news, li {

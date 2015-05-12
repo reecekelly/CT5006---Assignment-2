@@ -74,7 +74,7 @@
 			<div id="content" style=""> 
 				
 				<!--Main View Pages-->
-				<div class="panel" title="Home" id="home" data-footer="none" selected="true">
+				<content class="panel" title="Home" id="home" data-footer="none" selected="true">
 				
 					<header>
 						<a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
@@ -92,10 +92,11 @@
 						
 					</div>
 						
-				</div>
+				</content>
 					
 				<!--Map Section-->
-				<div class="panel" title="Map" id="map">
+				<content class="panel" title="Map" id="map">
+				
 					<header>
 						<a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
 						<h1>Map</h1>
@@ -105,41 +106,46 @@
 					<div id="map-navigation-centre" onclick="centreMap()"> </div>
 					<div id="map-navigation-return"> </div>
 					
-					<footer position="fixed">
+					<footer data-role="footer">
 						<div id="controls">
 						<input id="address" type="textbox" placeholder="Enter postcode or street">
 						<input type="button" value="Search" id="searchbutton" onclick="codeAddress()">
 						</div>
 					</footer>
-				</div>
+					
+				</content>
 					
 				<!--Notes section-->
-				<div class="panel" title="Notes" id="savednotes" data-role="footer">
+				<content class="panel" title="Notes" id="savednotes" data-role="footer">
 					<header>
+					
 						<a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
 						<h1>Note</h1>
 						<a href="#savednotes" id="delete-notes" class="icon trash" style="float:right; margin-top:10px; margin-left:5px;"></a>
 						<a href="#newnote" class="icon add" style="float:right; margin-top:10px;"></a>
 					
 					</header>
-						<ul id="notes"></ul>
-							
-						<br>
 					
-				</div>
+					<ul id="notes"></ul>		
+					<br>
+					
+				</content>
 					
 					
 				<!--Creates New Note-->
-				<div class="panel" title="Notes" id="newnote" data-footer="none">
+				<content class="panel" title="Notes" id="newnote" data-footer="none">
+				
 					<header>
 						<a id="menubadge" onclick='$.ui.toggleSideMenu()' class='menuButton' style="float:left !important"></a>
 						<h1>Note</h1>
 						<a href="javascript:void(null)" class="icon add" id="submit"  style="float:right; margin-top:10px;"></a>
 					</header>
-						<form style="width:100%; height:100%;">
-							<textarea placeholder="enter your note" id="note"></textarea>
-						</form>
-				</div>
+					
+					<form style="width:100%; height:100%;">
+						<textarea placeholder="enter your note" id="note"></textarea>
+					</form>
+					
+				</content>
 			
 			</div>
 			
