@@ -131,7 +131,6 @@ h2 span:last-child {
 #news {
 	width: 100%;
 	height: 50px;
-	background-color: black;
 }
 
 #news, li {
@@ -139,5 +138,4 @@ h2 span:last-child {
 	overflow:	hidden;
 	width:		100%;
 	height:		1%	;
-	background-color: black;
 }
