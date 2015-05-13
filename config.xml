@@ -22,12 +22,12 @@
 		<preference name="DisallowOverscroll" value="true" />
 		
 		<gap:plugin name="com.phonegap.plugin.statusbar" version="1.0.1" />
-		<gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
-		<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
-		<gap:plugin name="org.apache.cordova.inappbrowser" />
-		<gap:plugin name="org.apache.cordova.core.vibration" />
 		<gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
-		
+		<gap:plugin name="org.apache.cordova.core.vibration" version="0.3.11" />
+		<gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
+		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
+		<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
+
 		<preference name="prerendered-icon" value="true" />
 		<icon src="images/chelt_finder_512x512.png" />	
 		
