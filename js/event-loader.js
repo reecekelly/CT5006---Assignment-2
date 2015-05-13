@@ -14,8 +14,8 @@ function loadEvents() {
 				
 				var event = eventobject[i].event_location;
 				var newsreel = document.createElement("li");
-				$(newsreel).html('<a href="#" onclick="var ref=window.open("https://plus.google.com/103500992688270718512/posts", "_blank", "location=yes")" rel="external">' +
-									"<li class='event-holder'>" +
+				$(newsreel).html('<a href="#" onClick="var ref=window.open("'+event.event_link+'", "_blank", "location=yes")" rel="external">' +
+									'<li class="event-holder">' +
 										"<img src='data:image/png;base64," + event.event_picture + "' />"+
 										"<h2>" +
 											"<span>"+event.event_name+"</span>" +
