@@ -27,15 +27,12 @@
 		<gap:plugin name="org.apache.cordova.inappbrowser" />
 		<gap:plugin name="org.apache.cordova.core.vibration" />
 		<gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
-		<gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
 		
 		<preference name="prerendered-icon" value="true" />
 		<icon src="images/chelt_finder_512x512.png" />	
 		
-		<preference name="SplashScreen" value="splash_chelt_finder.png" />
-		<preference name="SplashScreenDelay" value="5000" />
-		
-
+		<gap:splash src="splash_chelt_finder.png" />
+		<preference name="SplashScreenDelay" value="2000"/>
 		
 		<content src="index.html" />
 		
