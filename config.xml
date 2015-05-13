@@ -30,13 +30,13 @@
 		<gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
 		
 		<preference name="prerendered-icon" value="true" />
+		<icon src="images/chelt_finder_512x512.png" />	
 
-		<!--<gap:splash src="chelt_finder.png" />
-		<preference name="SplashScreenDelay" value="10000"/>-->
-		
-		<icon src="images/chelt_finder_512x512.png" />		
+		<gap:splash src="splash_chelt_finder.png" />
+		<preference name="SplashScreenDelay" value="2000"/>
 		
 		<content src="index.html" />
 		
 		<access origin="*"/>
+		
 </widget>
