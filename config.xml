@@ -2,12 +2,12 @@
 
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.reecekelly.universityofgloucestershirecomputing"
+        id        = "com.ct5006.cheltenhamfinder"
         version   = "1.0.5">
 		
-		<name>University of Gloucestershire Computing</name>
-		<description>An easy to use app for new or existing students studing a computing based course at the Universty of Gloucestershire.</description>
-		<author href="http://reecekelly.comyr.com/">Reece Kelly</author>
+		<name>Cheltenham Finder</name>
+		<description>This app allows you to find the latest events and locate the most remarkable locations found throughout Cheltenham using the interaction map.</description>
+		<author>Reece Kelly, Noureen</author>
 		
 		<feature name="http://api.phonegap.com/1.0/device" />
 		
