@@ -14,13 +14,15 @@ function loadEvents() {
 				
 				var event = eventobject[i].event_location;
 				var newsreel = document.createElement("li");
-				$(newsreel).html("<li class='event-holder' href='#' onclick='var ref=window.open('https://plus.google.com/103500992688270718512/posts', '_blank', 'location=yes')' rel='external'>" +
-									'<img src="data:image/png;base64,' + event.event_picture + '" />'+
-									"<h2>" +
-										"<span>"+event.event_name+"</span>" +
-										"<span class='second'>"+event.event_date+"</span>" +
-									"</h2>" +
-								"</li>");
+				$(newsreel).html("<a href='#' onclick='var ref=window.open('https://plus.google.com/103500992688270718512/posts', '_blank', 'location=yes')' rel='external'>" +
+									"<li class='event-holder'>" +
+										'<img src="data:image/png;base64,' + event.event_picture + '" />'+
+										"<h2>" +
+											"<span>"+event.event_name+"</span>" +
+											"<span class='second'>"+event.event_date+"</span>" +
+										"</h2>" +
+									"</li>" +
+								"</a>");
 						
 				startpoint.appendChild(newsreel);
 			}
