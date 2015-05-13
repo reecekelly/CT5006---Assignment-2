@@ -48,3 +48,7 @@ $(document).on('click', '#map-navigation-return', function() {
 $(document).on('click', '.iconlocation', function() {
 	loadMap();
 });
+
+function inAppBrowser(url) {
+	var ref=window.open(eventurl[url], '_blank', 'location=yes');
+}
