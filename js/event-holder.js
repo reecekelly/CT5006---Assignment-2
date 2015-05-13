@@ -5,7 +5,7 @@ function onLoad() {
 }
 			
 window.onload = function() {
-	
+	navigator.notification.beep(2);
 	var headerheight = $(header).height();
 	
 	$("#map-div").css('height', screen.height - (headerheight*2));
