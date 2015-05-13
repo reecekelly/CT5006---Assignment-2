@@ -25,7 +25,6 @@
 		<gap:plugin name="org.apache.cordova.geolocation" version="0.3.10" />
 		<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
 		<gap:plugin name="org.apache.cordova.inappbrowser" />
-		<gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
 		<gap:plugin name="org.apache.cordova.core.vibration" />
 		<gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
 		
