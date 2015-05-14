@@ -61,7 +61,11 @@
 			document.addEventListener("deviceready", onready, false);
 			
 			function onready() {
-				function checkConnection() {
+				checkConnection();
+				alert("through")
+			}
+			
+			function checkConnection() {
 					var networkState = navigator.connection.type;
 
 					var states = {};
@@ -75,10 +79,6 @@
 					states[Connection.NONE]     = 'No network connection';
 
 					alert('Connection type: ' + states[networkState]);
-				}
-
-				checkConnection();
-				alert("through")
 			}
 		
 			document.addEventListener("batterystatus", onBatteryStatus, false);
