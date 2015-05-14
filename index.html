@@ -56,15 +56,7 @@
 			});
 		</script>  
 		
-		<script>
-		
-			document.addEventListener("deviceready", onready, false);
-			
-			function onready() {
-				checkConnection();
-				alert("through")
-			}
-			
+		<script>	
 			function checkConnection() {
 					var networkState = Connection.CELL;
 
@@ -80,8 +72,8 @@
 
 					alert('Connection type: ' + states[networkState]);
 			}
-		
-			document.addEventListener("batterystatus", onBatteryStatus, false);
+			
+			checkConnection();
 
 			function onBatteryStatus(info) {
 				// Handle the online event
@@ -133,7 +125,7 @@
 
 						<div class="weather-widget">
 							<a href="http://www.accuweather.com/" class="aw-widget-legal"></a>
-							<div id="awcc1421417028158" class="aw-widget-current"  data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1421417028158"></div>
+							<div id="awcc1421417028158" class="aw-widget-current" onClick="return false;" data-locationkey="" data-unit="c" data-language="en-us" data-useip="true" data-uid="awcc1421417028158"></div>
 						</div>
 						
 						<ul id="news"> </ul>
