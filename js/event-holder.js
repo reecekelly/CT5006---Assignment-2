@@ -1,8 +1,13 @@
 
+document.addEventListener("deviceready", onReady, false);
+
 function onLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 	document.addEventListener("online", onOnline, false);
 	document.addEventListener("offline", onOffline, false);
+}
+function onReady() {
+	alert(JSON.stringify(navigator.network.connection.type));
 }
 		
 window.onload = function() {
