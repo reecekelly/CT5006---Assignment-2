@@ -15,6 +15,7 @@ appframework/icons.css
 appframework/appframework.ui.min.js
 appframework/plugins/af.slidemenu.js
 
+jquery-mobile/jquery-1.8.3.min.js
 js/google-map-builder.js
 js/notes.js
 js/event-loader.js
