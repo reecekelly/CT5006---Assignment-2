@@ -3,9 +3,10 @@ function onLoad() {
 	document.addEventListener("online", onOnline, false);
 	document.addEventListener("offline", onOffline, false);
 }
-			
+		
+document.addEventListener("batterystatus", onBatteryStatus, false);
+		
 window.onload = function() {
-	window.addEventListener("batterystatus", onBatteryStatus, false);
 
 	var headerheight = $(header).height();
 	
