@@ -7,7 +7,7 @@
 		
 		<name>Cheltenham Finder</name>
 		<description>This app allows you to find the latest events and locate the most remarkable locations found throughout Cheltenham using the interactive map.</description>
-		<author>Reece Kelly, Noureen</author>
+		<author>Reece Kelly, Noureen Sadiqi</author>
 		
 		<feature name="http://api.phonegap.com/1.0/device" />
 		
