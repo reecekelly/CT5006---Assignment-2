@@ -67,6 +67,7 @@ $(document).on('click', '.iconlocation', function() {
 
 function inAppBrowser(url) {
 	var internet = JSON.stringify(navigator.network.connection.type);
+	alert(internet);
 	
 	if(internet != "offline") {
 		var ref=window.open(eventurl[url], '_blank', 'location=yes');
