@@ -40,7 +40,7 @@ function onReady() {
 document.addEventListener("offline", onOffline, false);
 
 function onOffline() {
-    alert("offline");
+    alert("Your device is no longer connected to the internet, please reconnect to use all of the applications features.");
 }
 
 function onBatteryStatus(info) {
@@ -66,7 +66,9 @@ $(document).on('click', '.iconlocation', function() {
 });
 
 function inAppBrowser(url) {
-	if(JSON.stringify(navigator.network.connection.type) != 'offline') {
+	var internet = JSON.stringify(navigator.network.connection.type);
+	
+	if(internet != "offline") {
 		var ref=window.open(eventurl[url], '_blank', 'location=yes');
 	} else {
 		alert("Please connect to the internet to view external sites");
