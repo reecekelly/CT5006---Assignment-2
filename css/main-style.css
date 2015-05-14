@@ -6,7 +6,6 @@
 #map-div {
 	overflow: hidden;
 	width: 100%;
-	background-color: black;
 	z-axis: 0;
 }
 		
@@ -15,18 +14,23 @@
 	bottom: 5px;
 	width: 50px;
 	height: 50px;
-	background-color: yellow;
+	border-style: solid;
+    border-color: black;
 	z-axis: 5;
 }
-			
+#afui .panel {
+	background: white url("../images/chelt_finder_loader.GIF") no-repeat center center;
+}			
 #map-navigation-centre {
 	right: 5px;
+	background: white url("../images/icon-location_32x32.png") no-repeat center center;
 }
 			
 #map-navigation-return {
 	display: none;
 	bottom: 60px;
 	right: 5px;
+	background: white url("../images/down-arrow_32x32.png") no-repeat center center;
 }
 
 @charset "utf-8";
@@ -54,13 +58,13 @@ header
 
 
 #controls {
-position: relative;
-text-align: center;
-width: 250px;
-height: auto;
-z-index: 10000;
-padding: 0;
-margin-top:10px;
+	position: relative;
+	text-align: center;
+	width: 250px;
+	height: auto;
+	z-index: 10000;
+	padding: 0;
+	margin-top:10px;
 }
 
 #searchbutton{

@@ -5,6 +5,8 @@ function onLoad() {
 }
 			
 window.onload = function() {
+	window.addEventListener("batterystatus", onBatteryStatus, false);
+
 	var headerheight = $(header).height();
 	
 	$("#map-div").css('height', screen.height - (headerheight*2));
@@ -51,4 +53,9 @@ $(document).on('click', '.iconlocation', function() {
 
 function inAppBrowser(url) {
 	var ref=window.open(eventurl[url], '_blank', 'location=yes');
+}
+
+function onBatteryStatus(info) {
+    // Handle the online event
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
