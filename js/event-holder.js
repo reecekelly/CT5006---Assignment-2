@@ -58,5 +58,5 @@ function inAppBrowser(url) {
 
 function onBatteryStatus(info) {
     // Handle the online event
-    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+    alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
