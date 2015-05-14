@@ -4,10 +4,8 @@ function onLoad() {
 	document.addEventListener("offline", onOffline, false);
 }
 		
-document.addEventListener("batterystatus", onBatteryStatus, false);
-		
 window.onload = function() {
-
+	document.addEventListener("batterystatus", onBatteryStatus, false);
 	var headerheight = $(header).height();
 	
 	$("#map-div").css('height', screen.height - (headerheight*2));
