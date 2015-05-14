@@ -5,7 +5,6 @@ var notes = [];
 var key = "takenotes";
 
 function createNote() { 
-	location.reload();
     // Get content of note
     var noteText = document.getElementById("note");
 	text = noteText.value;
@@ -13,7 +12,7 @@ function createNote() {
     // Ensure that note text is not empty
     if (text == null || text == "" || text.length == 0) {
 		alert("Please enter a note!");
-		return;
+		 return;
 	}
     else{
 		// Set note properties
@@ -25,11 +24,15 @@ function createNote() {
 		storeNotes();
     
 		// Display note on page	
-		addNoteToPage(note);
-		
-		location.href="#savednotes";
+		addNoteToPage(note);	
 	};
+	location.href="#savednotes";
+	$('#note').val('');
 };
+
+function eraseText() {
+document.getElementById("newnote").value = "";
+}
 
 
 function addNoteToPage(note) { 
@@ -84,6 +87,3 @@ function deleteNotes() {
 	//Call confirmation	
 	checkDel();
 }
-
-//Add date automatically
-document.getElementById("date").innerHTML = Date();

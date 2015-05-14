@@ -21,7 +21,7 @@ window.onload = function() {
 	// Check for localStorage capabilities 
 	if (!window.localStorage) {
 		// If localStorage is unavailable, warn user.  
-		alert("You are using a web browser that is too old for this program. Please upgrade your web browser if you wish to get the full experience.");
+		alert("Local storage not supported");
 	} else {
 		// If localStorage is available, display notes.  
 		loadNotes();
@@ -50,8 +50,8 @@ function onBatteryStatus(info) {
 }
 					
 $(document).on('click', '.directions', function() {
-	clearMarkers();
 	calcRoute(point, markerstore[this.dataset.marker].getPosition(), this.dataset.method);
+	clearMarkers();
 	$( "#map-navigation-return" ).toggle();
 });
 			
@@ -67,15 +67,8 @@ $(document).on('click', '.iconlocation', function() {
 });
 
 function inAppBrowser(url) {
-	var internet = JSON.stringify(navigator.network.connection.type);
-	alert(internet);
-	
-	if(internet != "none") {
-		var ref=window.open(eventurl[url], '_blank', 'location=yes');
-	} else {
-		navigator.vibrate(1000);
-		alert("Please connect to the internet to view external sites");
-	}
+	navigator.vibrate(1000);
+	var ref=window.open(eventurl[url], '_blank', 'location=yes');
 }
 
 function vibrate() {

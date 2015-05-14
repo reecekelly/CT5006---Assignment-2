@@ -9,6 +9,10 @@
 	z-axis: 0;
 }
 		
+a {
+	text-decoration: none;
+}		
+		
 #map-navigation-centre, #map-navigation-return {
 	position: absolute;
 	bottom: 5px;
@@ -18,9 +22,7 @@
     border-color: black;
 	z-axis: 5;
 }
-#afui .panel {
-	background: white url("../images/chelt_finder_loader.GIF") no-repeat center center;
-}			
+			
 #map-navigation-centre {
 	right: 5px;
 	background: white url("../images/icon-location_32x32.png") no-repeat center center;
@@ -58,13 +60,13 @@ header
 
 
 #controls {
-	position: relative;
-	text-align: center;
-	width: 250px;
-	height: auto;
-	z-index: 10000;
-	padding: 0;
-	margin-top:10px;
+position: relative;
+text-align: center;
+width: 250px;
+height: auto;
+z-index: 10000;
+padding: 0;
+margin-top:10px;
 }
 
 #searchbutton{
@@ -74,8 +76,9 @@ header
     border:none;
     background-color:#0055A4;
     color:#fff;
-    height:25px;
+    height:28px;
     width:auto;
+	padding: 2px;
     border-top-right-radius:2px;
     border-bottom-right-radius:2px;
 }
@@ -85,7 +88,7 @@ header
     top:0px;
     left:0px;
     width:170px;
-    height:25px;
+    height:28px;
     border: 0px solid #498af3;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -96,9 +99,9 @@ header
 {
     background-color:#CCECFD;
 	color:#0055a4;
-    margin-bottom:1px;
+	margin-bottom:1px;
 	padding: 7px 10px;
-	border: 1px solid ##CBD2D8;
+	border: 1px solid #CCECFD;
 }
 
 .event-holder {

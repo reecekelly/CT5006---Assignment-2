@@ -25,6 +25,7 @@ function loadMap() {
 function initialize(position) {
 	userlat = position.coords.latitude;
 	userlng = position.coords.longitude;
+	geocoder = new google.maps.Geocoder(); 			
 				
 	directionsDisplay = new google.maps.DirectionsRenderer();
 	
@@ -74,7 +75,7 @@ function createMarker(name, description, post, phone, lat, lng, position) {
 		icon: "images/star-icon_32x32.png"
 	});	
 	
-	var contentinfo = '<h1>'+name+'</h1> </br>'+'<p>'+description+'</p> </br>'+'<p>'+post+'	'+phone+'</p> </br>'+'<p>Marker Location:'+marker.getPosition()+ '</p>'+'<button data-marker='+'"'+position+'"'+' data-method="WALKING" class="directions">Walk</button>'+'<button data-marker='+'"'+position+'"'+' data-method="BICYCLING" class="directions">Bicycling</button>'+'<button data-marker='+'"'+position+'"'+' data-method="DRIVING" class="directions">Driving</button>'+'<button data-marker='+'"'+position+'"'+' data-method="TRANSIT" class="directions">Transit</button>';
+	var contentinfo = '<h1>'+name+'</h1> </br>'+'<p>'+description+'</p> </br>'+'<p>'+post+'</p> </br>'+'<button data-marker='+'"'+position+'"'+' data-method="WALKING" class="directions">Walk</button>'+'<button data-marker='+'"'+position+'"'+' data-method="BICYCLING" class="directions">Bicycling</button>'+'<button data-marker='+'"'+position+'"'+' data-method="DRIVING" class="directions">Driving</button>'+'<button data-marker='+'"'+position+'"'+' data-method="TRANSIT" class="directions">Transit</button>';
 	
 	var infowindow = new google.maps.InfoWindow({
 		content: contentinfo
@@ -86,6 +87,41 @@ function createMarker(name, description, post, phone, lat, lng, position) {
 		infowindow.open(map, marker);
 	});
 
+}
+
+/**
+	User defined search
+*/
+function codeAddress() {
+    var address = document.getElementById("address").value;
+
+//geocoder
+    geocoder.geocode( { 'address': address}, function(results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+			map.setCenter(results[0].geometry.location);
+			
+		var marker = new google.maps.Marker({
+			map: map,
+			animation: google.maps.Animation.DROP,
+			position: results[0].geometry.location
+		});	
+	
+	var nextvalue = markerstore.length + 1;
+	var contentinfo = '<button data-marker='+'"'+nextvalue+'"'+' data-method="WALKING" class="directions">Walk</button>'+'<button data-marker='+'"'+nextvalue+'"'+' data-method="BICYCLING" class="directions">Bicycling</button>'+'<button data-marker='+'"'+nextvalue+'"'+' data-method="DRIVING" class="directions">Driving</button>'+'<button data-marker='+'"'+nextvalue+'"'+' data-method="TRANSIT" class="directions">Transit</button>';
+	
+	var infowindow = new google.maps.InfoWindow({
+		content: contentinfo
+	});
+
+	markerstore[nextvalue] = marker;
+	
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map, marker);
+	});
+		} else {
+			alert("Geocode was not successful for the following reason: " + status);
+		}	
+	});
 }
 
 /*
@@ -124,14 +160,3 @@ function reformMarkers() {
 	setAllMap(map);
 }
 
-function createEvent(name, description, picture, location, link, cost, date, telephone) {
-	var eventslot = document.createElement("event-holder");
-	var eventh2 = document.createElement("h2");
-	eventslot.appendChild(eventh2);
-	
-	var eventspan = document.createElement("span");
-    var t = document.createTextNode(name);	
-	eventh2.appendChild(t);
-	
-	document.main.appendChild(eventslot);
-}
