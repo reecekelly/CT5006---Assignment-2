@@ -1,3 +1,5 @@
+document.addEventListener("batterystatus", onBatteryStatus, false);
+
 function onLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 	document.addEventListener("online", onOnline, false);
@@ -5,6 +7,7 @@ function onLoad() {
 }
 		
 window.onload = function() {
+	
 	var headerheight = $(header).height();
 	
 	$("#map-div").css('height', screen.height - (headerheight*2));
@@ -53,9 +56,8 @@ function inAppBrowser(url) {
 	var ref=window.open(eventurl[url], '_blank', 'location=yes');
 }
 
-window.addEventListener("batterystatus", onBatteryStatus, false);
-
 function onBatteryStatus(info) {
     // Handle the online event
-    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+	alert(JSON.stringify(info));
+    alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
