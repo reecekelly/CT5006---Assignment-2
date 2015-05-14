@@ -40,6 +40,9 @@ function onReady() {
 document.addEventListener("offline", onOffline, false);
 
 function onOffline() {
+	for(var i=0; i<2; i++) {
+		navigator.vibrate(1000);
+	}
     alert("Your device is no longer connected to the internet, please reconnect to use all of the applications features.");
 }
 
@@ -74,4 +77,8 @@ function inAppBrowser(url) {
 	} else {
 		alert("Please connect to the internet to view external sites");
 	}
+}
+
+function vibrate() {
+	navigator.notification.vibrate(1000);
 }
