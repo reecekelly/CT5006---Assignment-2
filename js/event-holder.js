@@ -35,7 +35,12 @@ window.onload = function() {
 
 function onReady() {
 	alert(JSON.stringify(navigator.network.connection.type));
-	alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+	document.addEventListener("batterystatus", onBatteryStatus, false);
+}
+
+function onBatteryStatus(info) {
+    // Handle the online event
+    console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 					
 $(document).on('click', '.directions', function() {
