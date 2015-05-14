@@ -66,5 +66,9 @@ $(document).on('click', '.iconlocation', function() {
 });
 
 function inAppBrowser(url) {
-	var ref=window.open(eventurl[url], '_blank', 'location=yes');
+	if(JSON.stringify(navigator.network.connection.type) != 'offline') {
+		var ref=window.open(eventurl[url], '_blank', 'location=yes');
+	} else {
+		alert("Please connect to the internet to view external sites");
+	}
 }
