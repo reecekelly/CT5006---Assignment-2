@@ -1,13 +1,7 @@
-
-document.addEventListener("deviceready", onReady, false);
-
 function onLoad() {
 	document.addEventListener("deviceready", onDeviceReady, false);
 	document.addEventListener("online", onOnline, false);
 	document.addEventListener("offline", onOffline, false);
-}
-function onReady() {
-	alert(JSON.stringify(navigator.network.connection.type));
 }
 		
 window.onload = function() {
@@ -37,6 +31,11 @@ window.onload = function() {
 	var deleteNotesButton = document.getElementById("delete-notes");
 	deleteNotesButton.onclick = deleteNotes;
 	
+}
+
+function onReady() {
+	alert(JSON.stringify(navigator.network.connection.type));
+	alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
 }
 					
 $(document).on('click', '.directions', function() {
