@@ -1,0 +1,94 @@
+=dimensions($width, $height)
+	width:	$width
+	height:	$height
+
+=expanding-style($width, $min-height)
+	display:	block
+	overflow:	hidden
+	width:		$width
+	height:		1%	
+	min-height:	$min-height
+
+=transitions($trans-time)	
+	-webkit-transition:	$trans-time		
+	-moz-transition:	$trans-time
+	-ms-transition:		$trans-time
+	-o-transition:		$trans-time
+	transition:			$trans-time
+
+=transitions-dimensions($direction, $trans-time)
+	-webkit-transition:	$direction	$trans-time		
+	-moz-transition:	$direction	$trans-time
+	-ms-transition:		$direction	$trans-time
+	-o-transition:		$direction	$trans-time
+	transition:			$direction	$trans-time
+
+=rotate-amount($rotation-amount)
+	-webkit-transform:	rotate($rotation-amount)
+	-moz-transform:		rotate($rotation-amount)
+	-ms-transform:		rotate($rotation-amount)  
+	-o-transform:		rotate($rotation-amount)
+	transform:			rotate($rotation-amount)
+	
+=border-radius($curve-amount)
+	-webkit-border-radius:	$curve-amount
+	-moz-border-radius:		$curve-amount
+	-ms-border-radius:		$curve-amount
+	-o-border-radius:		$curve-amount
+	border-radius:			$curve-amount	
+	
+=appearance($visable)
+	-webkit-appearance:	$visable
+	-moz-appearance:	$visable
+	-ms-appearance:		$visable
+	-o-appearance:		$visable
+	appearance:			$visable	
+	
+=border-top-left-radius($curve-amount-top-left)
+	-webkit-border-top-left-radius:	$curve-amount-top-left
+	-moz-border-top-left-radius:	$curve-amount-top-left
+	-ms-border-top-left-radius:		$curve-amount-top-left
+	-o-border-top-left-radius:		$curve-amount-top-left
+	border-top-left-radius:			$curve-amount-top-left
+	
+=border-top-right-radius($curve-amount-top-right)
+	-webkit-border-top-right-radius:	$curve-amount-top-right
+	-moz-border-top-right-radius:		$curve-amount-top-right
+	-ms-border-top-right-radius:		$curve-amount-top-right
+	-o-border-top-right-radius:			$curve-amount-top-right
+	border-top-right-radius:			$curve-amount-top-right
+	
+=border-bottom-left-radius($curve-amount-bottom-left)
+	-webkit-border-bottom-left-radius:	$curve-amount-bottom-left
+	-moz-border-bottom-left-radius:		$curve-amount-bottom-left
+	-ms-border-bottom-left-radius:		$curve-amount-bottom-left
+	-o-border-bottom-left-radius:		$curve-amount-bottom-left
+	border-bottom-left-radius:			$curve-amount-bottom-left
+	
+=border-bottom-right-radius($curve-amount-bottom-right)
+	-webkit-border-bottom-right-radius:	$curve-amount-bottom-right
+	-moz-border-bottom-right-radius:	$curve-amount-bottom-right
+	-ms-border-bottom-right-radius:		$curve-amount-bottom-right
+	-o-border-bottom-right-radius:		$curve-amount-bottom-right
+	border-bottom-right-radius:			$curve-amount-bottom-right
+
+=box-shadow($position, $color)
+	-webkit-box-shadow:	$position $color
+	-moz-box-shadow:	$position $color
+	-ms-box-shadow:		$position $color
+	-o-box-shadow:		$position $color
+	box-shadow:			$position $color
+	
+=box-shadow-inner($position, $color)
+	-webkit-box-shadow:	inset $position $color
+	-moz-box-shadow:	inset $position $color
+	-ms-box-shadow:		inset $position $color
+	-o-box-shadow:		inset $position $color
+	box-shadow:			inset $position $color
+	
+=text-shadow($position, $color)
+	-webkit-text-shadow:	$position $color
+	-moz-text-shadow:		$position $color
+	-ms-text-shadow:		$position $color
+	-o-text-shadow:			$position $color
+	text-shadow:			$position $color	

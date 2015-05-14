@@ -1,8 +1,11 @@
+@import prod
+
+@charset "utf-8"
+
 *
 	padding: 0px
 	margin: 0 auto
 
-	
 #map-div 
 	overflow: hidden
 	width: 100%
@@ -11,121 +14,120 @@
 a 
 	text-decoration: none
 			
-#map-navigation-centre, #map-navigation-return 
+#map-nav 
 	position: absolute
 	bottom: 5px
-	width: 50px
-	height: 50px
+	+dimensions(50px, 50px)
 	border-style: solid
 	border-color: black
 	z-axis: 5
 	
 #map-navigation-centre 
+	@extend #map-nav 
 	right: 5px
 	background: white url("../images/icon-location_32x32.png") no-repeat center center
 		
 #map-navigation-return 
+	@extend #map-nav 
 	display: none
 	bottom: 60px
 	right: 5px
 	background: white url("../images/down-arrow_32x32.png") no-repeat center center
 
-@charset "utf-8"
-
 h1
 	font-size: 12px
 
 #link_get_widget
-	visibility:hidden
-	display:none
+	visibility: hidden
+	display: none
 
 header
-	text-align:center
-
+	text-align: center
 
 .aw-widget-current-inner
-	max-width:none
+	max-width: none
 
 #controls 
 	position: relative
 	text-align: center
-	width: 250px
-	height: auto
+	+dimensions(250px, auto)
 	z-index: 10000
 	padding: 0
 	margin-top: 10px
 
-
 #searchbutton
-	position:absolute 
-	top:0px
-	left:171px
-	border:none
-	background-color:#0055A4
-	color:#fff
-	height:28px
-	width:auto
+	position: absolute 
+	+dimensions(auto, 28px)
+	top: 0px
+	left: 171px
+	border: none
+	background-color: #0055A4
+	color: #fff
 	padding: 2px
-	border-top-right-radius:2px
-	border-bottom-right-radius:2px
-
+	+border-top-left-radius(2px)
+	+border-top-right-radius(2px)
 
 #address
-	position:absolute
-	top:0px
-	left:0px
-	width:170px
-	height:28px
+	position: absolute
+	top: 0px
+	left: 0px
+	+dimensions(170px, 28px)
 	border: 0px solid #498af3
-	border-top-left-radius: 2px
-	border-top-right-radius: 2px
-	text-indent:10px
+	+border-top-left-radius(2px)
+	+border-top-right-radius(2px)
+	text-indent: 10px
 
 #savednotes ul li
-	background-color:#CCECFD
-	color:#0055a4
-	margin-bottom:1px
+	color: #0055a4
+	margin-bottom: 1px
 	padding: 7px 10px
 	border: 1px solid #CCECFD
+	background-color: #CCECFD
 
 .event-holder 
 	position: relative
-	width: 100% 
-	height: 250px
+	+dimensions(100%, 250px)
 	overflow-y: hidden
-
 
 .event-holder img 
 	width: 100%
-
 
 h2 
 	position: absolute
 	bottom: 0px
 	width: 100%
 
-h2 span 
-	float: left
-	border-right: 25px
-	color: white
-	font: bold 24px/45px Helvetica, Sans-Serif 
-	letter-spacing: -1px  
-	background: rgb(0, 0, 0)
-	background: rgba(0, 0, 0, 0.7) 
+	& span 
+		float: left
+		border-right: 25px
+		color: white
+		font: bold 24px/45px Helvetica, Sans-Serif 
+		letter-spacing: -1px  
+		background: rgb(0, 0, 0)
+		background: rgba(0, 0, 0, 0.7) 
 
 h2 span:last-child 
 	margin-left: 50px
 
 #news 
-	width: 100%
-	height: 50px
+	+dimensions(100%, 50px)
 	margin-top: -10px
 
-#news, li 
-	display:	block
-	overflow:	hidden
-	width:		100%
-	height:		1%	
+#news li 
+	+expanding-style(100%, 250px)
 
 li a 
 	width: 100%
+	
+@media only screen and (min-device-width : 880px)
+	#news li 
+		float : left
+		width : 50%
+		height : 0
+		padding-bottom : 50%
+		
+		& a
+			+dimensions(100%, 100%)
+			
+			& .event-holder
+				width: 100%
