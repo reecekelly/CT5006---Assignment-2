@@ -30,6 +30,10 @@
 		<gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 		<gap:plugin name="org.apache.cordova.network-information" version="0.2.12" />
 
+		<feature name="NetworkStatus">
+			<param name="ios-package" value="CDVConnection" />
+		</feature>
+		
 		<preference name="prerendered-icon" value="true" />
 		<icon src="images/chelt_finder_512x512.png" />	
 		
