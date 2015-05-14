@@ -35,7 +35,12 @@ window.onload = function() {
 
 function onReady() {
 	alert(JSON.stringify(navigator.network.connection.type));
-	document.addEventListener("batterystatus", onBatteryStatus, false);
+}
+
+document.addEventListener("offline", onOffline, false);
+
+function onOffline() {
+    alert("offline");
 }
 
 function onBatteryStatus(info) {
