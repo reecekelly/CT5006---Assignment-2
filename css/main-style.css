@@ -65,7 +65,8 @@ header {
 }
 
 #searchbutton {
-  width: auto;
+  float: right;
+  width: 60px;
   height: 28px;
   border: none;
   background-color: #0055a4;
