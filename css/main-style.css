@@ -13,6 +13,7 @@ a {
   text-decoration: none;
 }
 
+/*+ | Mixin function refer to _prod.sass file */
 #map-nav, #map-navigation-centre, #map-navigation-return {
   position: absolute;
   bottom: 5px;
@@ -23,6 +24,7 @@ a {
   z-axis: 5;
 }
 
+/*@extend | copies all sass styling from selected location */
 #map-navigation-centre {
   right: 5px;
   background: white url("../images/icon-location_32x32.png") no-repeat center center;
@@ -63,25 +65,17 @@ header {
 }
 
 #searchbutton {
-  position: absolute;
   width: auto;
   height: 28px;
-  top: 0px;
-  left: 171px;
   border: none;
   background-color: #0055a4;
   color: white;
-  padding: 2px;
-  -webkit-border-top-left-radius: 2px;
-  -moz-border-top-left-radius: 2px;
-  -ms-border-top-left-radius: 2px;
-  -o-border-top-left-radius: 2px;
-  border-top-left-radius: 2px;
-  -webkit-border-top-right-radius: 2px;
-  -moz-border-top-right-radius: 2px;
-  -ms-border-top-right-radius: 2px;
-  -o-border-top-right-radius: 2px;
-  border-top-right-radius: 2px;
+  padding: 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
 }
 
 #address {
@@ -136,6 +130,7 @@ h2 span {
   letter-spacing: -1px;
   background: black;
   background: rgba(0, 0, 0, 0.7);
+  text-overflow: ellipsis;
 }
 
 h2 span:last-child {
@@ -143,35 +138,19 @@ h2 span:last-child {
 }
 
 #news {
-  width: 100%;
-  height: 50px;
-  margin-top: -10px;
-}
-
-#news li {
   display: block;
   overflow: hidden;
   width: 100%;
   height: 1%;
-  min-height: 250px;
+  min-height: 50px;
+  margin-top: -10px;
 }
 
-li a {
+#news li {
   width: 100%;
+  margin-top: -10px;
 }
 
-@media only screen and (min-device-width: 880px) {
-  #news li {
-    float: left;
-    width: 50%;
-    height: 0;
-    padding-bottom: 50%;
-  }
-  #news li a {
-    width: 100%;
-    height: 100%;
-  }
-  #news li a .event-holder {
-    width: 100%;
-  }
+li a .event-holder {
+  width: 100%;
 }

@@ -1,9 +1,11 @@
 // Create empty notes array
 var notes = []; 
-
 // Key to store and retrieve from local storage
 var key = "takenotes";
 
+/**
+*	createNote - Creates and adds another piece of text to the devices local storage.
+*/
 function createNote() { 
     // Get content of note
     var noteText = document.getElementById("note");
@@ -30,11 +32,17 @@ function createNote() {
 	$('#note').val('');
 };
 
+/**
+*	eraseText - Removes the current value from the text field.
+*/
 function eraseText() {
 document.getElementById("newnote").value = "";
 }
 
-
+/**
+*	addNoteToPage - Displays the note value within the note taking page.
+*	@param note - Note value to be displayed.
+*/
 function addNoteToPage(note) { 
     // Determine where to place notes on page
     var notesUl = document.getElementById("notes");
@@ -51,6 +59,9 @@ function addNoteToPage(note) {
 	}
 }
 
+/**
+*	storeNotes - Add the current note to local storage.
+*/
 function storeNotes() { 
     // Convert array of notes to string
     var jsonNotes = JSON.stringify(notes);
@@ -58,6 +69,9 @@ function storeNotes() {
 	localStorage.setItem(key, jsonNotes);
 }
 
+/**
+*	loadNotes - Loads all the notes whicha re stored within local storage.
+*/
 function loadNotes() { 
     // Get notes
     var jsonNotes = localStorage.getItem(key);
@@ -71,7 +85,9 @@ function loadNotes() {
 	}
 }
 
- 
+ /**
+ *	deleteNotes - Deletes all the locally stored notes.
+ */
 function deleteNotes() { 
 	var checkDel = confirm("Are you sure you want to delete all of your notes?");
 	

@@ -13,7 +13,8 @@
 	
 a 
 	text-decoration: none
-			
+
+/*+ | Mixin function refer to _prod.sass file*/	
 #map-nav 
 	position: absolute
 	bottom: 5px
@@ -21,7 +22,8 @@ a
 	border-style: solid
 	border-color: black
 	z-axis: 5
-	
+
+/*@extend | copies all sass styling from selected location*/	
 #map-navigation-centre 
 	@extend #map-nav 
 	right: 5px
@@ -37,6 +39,7 @@ a
 h1
 	font-size: 12px
 
+	//Hides the link button on the weather widget
 #link_get_widget
 	visibility: hidden
 	display: none
@@ -56,16 +59,12 @@ header
 	margin-top: 10px
 
 #searchbutton
-	position: absolute 
 	+dimensions(auto, 28px)
-	top: 0px
-	left: 171px
 	border: none
 	background-color: #0055A4
 	color: #fff
-	padding: 2px
-	+border-top-left-radius(2px)
-	+border-top-right-radius(2px)
+	padding: 3px
+	+border-radius(2px)
 
 #address
 	position: absolute
@@ -105,29 +104,19 @@ h2
 		letter-spacing: -1px  
 		background: rgb(0, 0, 0)
 		background: rgba(0, 0, 0, 0.7) 
+		text-overflow: ellipsis
 
 h2 span:last-child 
 	margin-left: 50px
 
 #news 
-	+dimensions(100%, 50px)
+	+expanding-style(100%, 50px)
 	margin-top: -10px
 
 #news li 
-	+expanding-style(100%, 250px)
-
-li a 
 	width: 100%
-	
-@media only screen and (min-device-width : 880px)
-	#news li 
-		float : left
-		width : 50%
-		height : 0
-		padding-bottom : 50%
-		
-		& a
-			+dimensions(100%, 100%)
-			
-			& .event-holder
-				width: 100%
+	margin-top: -10px
+
+
+li a .event-holder
+	width: 100%

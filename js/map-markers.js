@@ -1,5 +1,11 @@
+//stores the url link to the marker PHP file
 var markerlink = "http://ct5006-14n.studentsites.glos.ac.uk/php/marker-addition.php";
 
+/**
+* markerReceive - Function hold the Ajax responsible for retrieving the data from the server side PHP file.
+* 					Designed to build Google map markers with retrieved data.
+*					Converts from JSON data.
+*/
 function markerReceive(){
 
 	$.ajax({

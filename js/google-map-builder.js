@@ -1,15 +1,17 @@
-// Required for two separate functions
+//stores the Google map.
 var map;
+//stores the current latitude of the user.
 var userlat;
+//stores the current longitude of the user.
 var userlng;
+//stores the current position of the user (lat, lng)
 var point;
+//stores all map markers
 var markerstore = [];				
-					
+//stores the directionsDisplay object used for plotting directions.				
 var directionsDisplay;
 
-var lightboxstate = false;
-			
-/*
+/**
 * Starts the google map api implementation if there is an internet connection.
 * Requires users current position, along with destination.
 */	
@@ -19,8 +21,9 @@ function loadMap() {
 	}
 }
 
-/*
-* This finds the users current gps location and parses it to the calcRoute function.
+/**
+* initialize - This finds the users current gps location and parses it to the calcRoute function.
+* @param position the current location of the device.
 */
 function initialize(position) {
 	userlat = position.coords.latitude;
@@ -45,14 +48,17 @@ function initialize(position) {
 	markerReceive();
 }
 
-/*
-* Moves the centre of the map back to the user
+/**
+* centreMap - Moves the centre of the map back to the user.
 */
 function centreMap() {
 	var latLng = new google.maps.LatLng(userlat, userlng);
 	map.panTo(latLng);
 }
 
+/**
+* createUser - Plots on the Google map the current position of the user (lat, lng).
+*/
 function createUser() {
 	var marker = new google.maps.Marker({
 		map: map,
@@ -62,7 +68,7 @@ function createUser() {
 	});	
 }
 
-/*
+/**
 * Creates a marker and information window based on location
 * @param markerlng the markers lat
 * @param markerlng the markers lng
@@ -90,7 +96,7 @@ function createMarker(name, description, post, phone, lat, lng, position) {
 }
 
 /**
-	User defined search
+*	codeAddress - Converts the entered value in the maps search bar into an interactive marker.
 */
 function codeAddress() {
     var address = document.getElementById("address").value;
@@ -124,9 +130,11 @@ function codeAddress() {
 	});
 }
 
-/*
-* Sets the users destination, mode of transportation, checks if they are available
-* @param point - The users current gps position (Lat and Lng)
+/**
+* calcRoute - Finds the appropriate path between two selected points on a Google map.
+* @param point - The starting point.
+* @param destination - The the chosen destination of the user.
+* @param selectedMode - The method of transport.
 */
 function calcRoute(point, destination, selectedMode) {
 	var directionsService = new google.maps.DirectionsService();
@@ -145,17 +153,27 @@ function calcRoute(point, destination, selectedMode) {
 	});
 }
 
+/**
+* setAllMap - Populates the map with the stored markers.
+* @param map - The targeted Google map object.
+*/
 function setAllMap(map) {
 	for (var i = 0; i < markerstore.length; i++) {
 		markerstore[i].setMap(map);
 	}
 }
 
+/**
+* clearMarkers - 
+*/
 function clearMarkers() {
 	setAllMap(null);
 	
 }
 
+/**
+* reformMarkers - 
+*/
 function reformMarkers() {
 	setAllMap(map);
 }

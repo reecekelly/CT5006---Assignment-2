@@ -1107,7 +1107,9 @@ body {
 #afui textarea {
   height: 100%;
   border-color:none;
+  resize: none;
 }
+
 #afui .input-group {
   width: auto;
   height: auto;

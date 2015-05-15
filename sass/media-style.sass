@@ -1,0 +1,51 @@
+@import prod
+
+/*Mobile Screen size*/	
+@media screen and (max-width: 349px)
+	#news li 
+		+expanding-style(100%, 150px)
+
+		& a
+			+dimensions(100%, 150px)
+			
+	h2
+		& span
+			font-size: 12px
+			text-overflow: ellipsis
+			
+/*Tablet screen*/
+@media screen and (min-width: 479px)
+	/*Changes events in dynamic squares*/
+	#news li 
+		float: left
+		overflow: none
+		width: 50%
+		
+		& a
+			+dimensions(100%, 100%)
+			
+			& .event-holder
+				width: 100%	
+	
+	.event-holder img 
+		
+		height: 100%
+		overflow-x: hidden
+	
+	h2
+		& span
+			font-size: 14px
+			text-overflow: ellipsis
+
+/*Small laptop screen size or higher*/			
+@media screen and (min-width: 925px)
+	#news li 
+		width: 33%
+
+		& a
+			+dimensions(100%, 150px)
+			
+	h2
+		& span 
+			font-size: 12px
+			text-overflow: ellipsis
